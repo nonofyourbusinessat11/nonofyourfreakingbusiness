@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+    color: #333;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    height: 30%;
+    margin-bottom: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center;    /* Vertically center content */
+  padding: 1em 2em;
+  z-index: 2;
+  background-color: #a7cec7;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Align logo and name vertically */
+  gap: 1em;           /* Add space between the logo and the name */
+}
+
+.logo-image {
+  width: 70px; /* Adjust logo size */
+  height: auto;
+  border-radius: 50%; /* Optional: make the logo round */
+}
+
+.business-name {
+  font-size: 2em;    /* Font size for the business name */
+  font-weight: bold;   /* Make it bold */
+  color: black;        /* Text color */
+  text-align: center;  /* Optional: Align text in the center */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.navbar {
+  margin-top: 5px;
+  width: 100%;
+  background: transparent; /* Transparent background */
+  text-align: center;
+  padding: 1em 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 2em;
+}
+
+.nav-links a {
+    color:black; /* Text color for nav links */
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.2em 1em;
+    font-weight: bold;
+    transition:"background-color0.3s, color 0.3s";
+}
+
+.nav-links a:hover {
+    background-color:#a7cec7; 
+    
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 400px; /* Adjust the banner height */
+    background: url('banner.jpg') no-repeat center center/cover; /* Banner background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top:5px; /* Add some margin to the top so content is not hidden behind the nav */
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay to improve text visibility */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.shop-now-button {
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color:#a7cec7 ;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 250px; /* Smaller banner for mobile */
+    }
+
+    .banner-content h1 {
+        font-size: 32px; /* Smaller heading for mobile */
+    }
+
+    .banner-content p {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+
+    .shop-now-button {
+        padding: 8px 16px; /* Smaller button for mobile */
+    }
+}
+h2{
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.product-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color:black;
+    margin-bottom: 22px;
+  }
+  
+  /* Scrollable Grid */
+  .scrollable-grid {
+    display: flex;
+    gap: 1em;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    margin: 0 auto; /* Centers the grid */
+    max-width: 1200px; /* Sets width of the grid */
+  }
+  
+  .scrollable-grid::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .scrollable-grid::-webkit-scrollbar-thumb {
+    background:#a7cec7 ;
+    border-radius: 5px;
+  }
+  
+  .scrollable-grid::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+  }
+  
+  /* Product Card Styling */
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 310px;
+    flex-shrink: 0;
+    height:400px;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Badge Styling */
+  .product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #a7cec7;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Product Image */
+  .product-image {
+    object-fit: cover;
+    margin-bottom: 15px;
+    width: 100%; /* Makes images responsive */
+  height: 150px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image doesn't distort */
+  }
+  /*Product name*/
+  .product-name{
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    font-weight: bold;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+  }
+  
+  /* Product Description */
+  .product-description {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    margin-bottom: 5px;
+    text-align: center;
+    height: 60px; /* Fixed height for descriptions */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds "..." for longer descriptions */
+  }
+  
+  /* Product Price */
+  .product-price {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color:#a7cec7;
+    margin-bottom: 10px;
+  }
+  .discounted-product-prices {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .old-price {
+    color: gray;
+    text-decoration: line-through;
+    font-weight: normal;
+    opacity: 0.7;
+  }
+  
+  .new-price {
+    color: #a7cec7;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  /* Stock Status */
+  .stock-status {
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Buy Now Button */
+  .buy-now-btn {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    background-color: #a7cec7;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 17px;
+    position: relative;
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #219150;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .product-card {
+      min-width: 180px;
+    }
+  }
+  .About-us-content{
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color:#a7cec7;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #004d4d;
+    margin-bottom: 20px;
+  }
+  
+  /* About Section */
+  .about-section {
+    margin-bottom: 40px;
+  }
+  
+  .about-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  .location {
+    margin-top: 20px;
+  }
+  
+  .location iframe {
+    margin-top: 15px;
+    width: 100%;
+    height: 300px;
+    border: 0;
+  }
+  
+  /* Vision Section */
+  .vision-section {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #d0f4f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vision-section p {
+    font-size: 18px;
+    color: #004d4d;
+    margin: 0;
+  }
+  
+  /* Core Values Section */
+  .core-values-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .core-values-section h2 {
+    font-size: 28px;
+    color: #004d4d; /* Teal */
+    margin-bottom: 30px;
+  }
+  
+  .values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .value-box {
+    flex: 1 1 calc(25% - 20px); /* 4 boxes per row */
+    background-color: #d0f4f2; /* Light teal */
+    border: 1px solid #b2e4e0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-box h3 {
+    font-size: 20px;
+    color: #004d4d;
+    margin-bottom: 15px;
+  }
+  
+  .value-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .value-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .value-box {
+      flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .value-box {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* Footer Section */
+  footer {
+    background-color: #004d4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    left: 0;
+  }
+
+/* Footer Styling */
+footer {
+  background-color: #004d4d; /* Dark teal */
+  color: #ffffff; /* White text */
+  padding: 30px 20px;
+  width: 100%;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 ;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+/* Footer Logo and Links */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  width: 40px; /* Logo size */
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer-logo h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d0f4f2; /* Soft teal */
+}
+
+.footer-nav {
+  margin: 10px 0;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #d0f4f2; /* Soft teal hover */
+}
+
+
+
+/* Contact Information */
+.footer-contact p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-contact p i {
+  color: #d0f4f2; /* Soft teal for icons */
+  margin-right: 10px;
+}
+
+/* About Section */
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Style for Social Media Icons */
+.social-icons a {
+  margin-right: 15px;
+  display: inline-block;
+  margin-bottom: 10px; /* Add space below the icons */
+}
+
+.social-icons img {
+  width: 40px;  /* Adjust the size of the icons as needed */
+  height: 40px;
+    /* White icons */
+  transition: filter 0.3s ease;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  color: #d0f4f2;
+  clear: both; /* Ensures footer bottom is placed below content */
+}
+
+.footer-bottom a {
+  color: #d0f4f2;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+.footer-feedback {
+  margin-top: 1em;
+  color: #d0f4f2;
+}
+
+.footer-feedback h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+.footer-feedback a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-feedback a:hover {
+  color: #a7cec7;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 5px 0;
+  }
+.footer-feedback {
+  margin-top: 1em;
+  color: #d0f4f2;
+}
+
+.footer-feedback h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+.footer-feedback a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #a7cec7;
+  transition: color 0.3s;
+}
+
+.footer-feedback a:hover {
+  color: #f9f9f9;
+}
+  /* Footer Bottom on small screens */
+  .footer-bottom {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+}
